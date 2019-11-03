@@ -36,5 +36,5 @@ app.use('/forget', require('./Routers/forget'))
 app.use('/update', require('./Routers/update'))
 
 
-port = process.env.PORT || 8000
+port = process.env.PORT || 4000
 app.listen(port, console.log('listening port' + port))

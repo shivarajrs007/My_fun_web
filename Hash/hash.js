@@ -34,8 +34,5 @@ function Pow(prevHash, input) {
     // console.log(hash);
 
     return nonce - 1;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 75f9b3c92d53596b96ebbaa461c77551a8021e43
+

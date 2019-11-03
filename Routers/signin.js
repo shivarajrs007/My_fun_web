@@ -26,17 +26,6 @@ router.post('/signin', (req, res) => {
                 msg: 'Email doesn\'t match'
             })
         }
-
-<<<<<<< HEAD
-        else if (elements.Email != blocks.Email) {
-=======
-
-        if (blocks === null) {
->>>>>>> 75f9b3c92d53596b96ebbaa461c77551a8021e43
-            res.render('signin', {
-                msg: 'Email doesn\'t match'
-            })
-        }
         else if (elements.Password != blocks.Password) {
             res.render('signin', {
                 msg: 'Password doesn\'t match'

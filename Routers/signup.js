@@ -43,52 +43,23 @@ router.post('/register', (req, res) => {
                 suc: 'Database Empty'
             })
         }
-<<<<<<< HEAD
         else if (req.body.pass1 !== req.body.pass2) {
-=======
-        // console.log(req.body.email);
 
-
-        if (req.body.pass1 !== req.body.pass2) {
->>>>>>> 75f9b3c92d53596b96ebbaa461c77551a8021e43
             res.render('signup', {
                 psw: 'Passward doesnot match'
             })
 
 
         }
-
-<<<<<<< HEAD
-        // else if () {
-        //     res.render('signup', {
-        //         emails: 'Email exists'
-        //     })
-        // }
-=======
-        if (getname(req.body.email.toString()) > -1) {
-            res.render('signup', {
-                emails: 'Email exists'
-            })
-        }
->>>>>>> 75f9b3c92d53596b96ebbaa461c77551a8021e43
         else {
             console.log(database[len].Currenthash);
             let prevHash = database[len].Currenthash;
             console.log(prevHash);
 
-<<<<<<< HEAD
 
 
             let data = (req.body.name1 + req.body.number + req.body.dob).toString()
             console.log(data);
-=======
-            // let prevblock = db[0].pop()
-
-            // //console.log(prevblock);
-
-            // prevHash = prevblock.Currenthash
-            // indexx = prevblock.index + 1
->>>>>>> 75f9b3c92d53596b96ebbaa461c77551a8021e43
 
             let indexx = database[len].index;
 
@@ -101,7 +72,7 @@ router.post('/register', (req, res) => {
             // console.log(hash);
 
 
-<<<<<<< HEAD
+
 
 
             elements = {
@@ -116,44 +87,7 @@ router.post('/register', (req, res) => {
                 PrevHash: prevHash,
                 Currenthash: hash,
                 Nonce: nonce,
-=======
-            // let timestamp = Date();
-            // timestamp = timestamp.toString()
-            // const data = indexx + timestamp + req.body.data + prevHash
 
-            // let cuurentHash = Mining.mining(data)
-
-            // // elements = {
-            //     Name: req.body.uname,
-            //     Email: req.body.email,
-            //     Dob: req.body.date,
-            //     Password: req.body.pass1,
-
-            //     index: indexx,
-            //     Timestamp: timestamp,
-            //     PrevHash: prevHash,
-            //     Data: req.body.data,
-            //     Currenthash: cuurentHash,
-            // }
-
-            elements = {
-                Name: 'SHivaraj',
-                Email: 'shivaraj@gmail.com',
-                Dob: '2 oct 2019',
-                Password: 'shiva321',
-
-                index: 23,
-                Timestamp: '2 oct 2019',
-                PrevHash: 'HSUSKJHSKHSJHJHSKHS',
-                Data: {
-                    name: 'Shiva',
-                    Dob: '2 0ct 2019',
-                    Job: 2345,
-                },
-                Currenthash: '0000DGDJHLKJDHLK',
-            }
-            console.log(elements);
->>>>>>> 75f9b3c92d53596b96ebbaa461c77551a8021e43
 
                 Data: {
                     partNumber: req.body.partnumber,
