@@ -1,0 +1,86 @@
+<div class="centerTwo">
+    <div class="row">
+        <div class="col s12 m4">
+            <div class='card  white'>
+                <div class="card-content indigo-text bold-text">
+                    <center><span class="card-title font-size:30%">
+                            <h4>Sign Up</h4>
+                        </span></center>
+                    <form action='/signup/register' method='post'>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mood</i>
+                            <input type="text" id="name" name='uname' required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">email</i>
+                            <input type="email" id="email" name='email' required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <center> <%= typeof emails != 'undefined' ? emails : '' %></center>
+                        <div class="input-field">
+                            <i class="material-icons prefix">lock</i>
+                            <input type="password" id="pass1" name='pass1' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                required>
+                            <label for="pass1">Your Password</label>
+                            <center> <%= typeof psw != 'undefined' ? psw : '' %></center>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">lock</i>
+                            <input type="password" id="pass2" name='pass2' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                required>
+                            <label for="pass2">Re-enter Password</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">date_range</i>
+                            <input type="text" id="date" name='date' class="datepicker">
+                            <label for="date">Joining Date</label>
+                        </div>
+
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input type="text" id="partnumber" name='partnumber' required>
+                            <label for="partnumber">Part number</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input type="text" id="equpType" name='equpType' required>
+                            <label for="equpType">Equip Type</label>
+                        </div>
+
+
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input id="Scale" type="tel" class="validate" name="Scale" required>
+                            <label for="Scale">Saleable part</label>
+                        </div>
+
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input id="Qty1" type="number" class="validate" name="Qty1" required>
+                            <label for="Qty1">Qty (2018)</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input id="Qty2" type="number" class="validate" name="Qty2" required>
+                            <label for="Qty2">Qty (2019)</label>
+                        </div>
+
+
+
+
+
+                        <div class="input-field center">
+                            <button class="btn indigo darken-4">Submit</button>
+                        </div>
+                    </form>
+                    <center> <%= typeof msg != 'undefined' ? msg : '' %></center>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

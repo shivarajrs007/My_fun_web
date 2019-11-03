@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .centerOne {
+            position: relative;
+            left: 600px;
+            top: 250px;
+        }
+
+        .centerTwo {
+            position: relative;
+            left: 550px;
+            top: 150px;
+        }
+
+        .centerThree {
+            position: relative;
+            left: 550px;
+            top: 0;
+        }
+
+        .centerFive {
+            position: relative;
+            left: 550px;
+            top: 0;
+
+        }
+
+        .centerFour {
+            position: relative;
+            left: 590px;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body class=' blue lighten-5'>
+
+    <div class="navbar-fixed ">
+        <nav class="nav-wrapper  deep-purple darken-4">
+            <div class="container">
+                <a href="#" class="brand-logo">BlockChain POC</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/part/inventory">Inventory</a></li>
+                    <li><a href="/part/Assembly">Assembly Line</a></li>
+                    <li><a href="/part/warehouse">Warehouse</a></li>
+
+                    <li><a href="/dashbord/dashbord">DashBoard</a></li>
+                    <li><a href="/user/signin" class="btn white indigo-text">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="">Home</a></li>
+
+        <li><a href="/dashbord/dashbord">DashBoard</a></li>
+    </ul>
+
+
+    <%- body %>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.datepicker').datepicker({
+
+            });
+            $('.parallax').parallax();
+        });
+    </script>
+
+</body>
+
+</html>

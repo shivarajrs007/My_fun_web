@@ -1,0 +1,52 @@
+<div class="centerOne">
+    <div class="row">
+        <div class="col s12 m4">
+            <div class='card  white'>
+                <div class="card-content indigo-text ">
+                    <center><span class="card-title">
+                            <h4>Assembly Line</h4>
+                        </span></center>
+                    <form action='/signin/signin' method='post'>
+                        <div class="red-text">
+                            <center> <%= typeof msg != 'undefined' ? msg : '' %></center>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input type="text" id="partnumber" name='partnumber' required>
+                            <label for="partnumber">Part number</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input type="text" id="equpType" name='equpType' required>
+                            <label for="equpType">Equip Type</label>
+                        </div>
+
+
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input id="Scale" type="tel" class="validate" name="Scale" required>
+                            <label for="Scale">Saleable part</label>
+                        </div>
+
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input id="Qty1" type="number" class="validate" name="Qty1" required>
+                            <label for="Qty1">Qty (2018)</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input id="Qty2" type="number" class="validate" name="Qty2" required>
+                            <label for="Qty2">Qty (2019)</label>
+                        </div>
+
+                        <div class="input-field center">
+                            <button class="btn indigo darken-4">Submit</button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
