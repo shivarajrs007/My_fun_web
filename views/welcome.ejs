@@ -10,8 +10,9 @@
                 <li><a href="/welcome/new">NewBlock</a></li>
                 <li><a href="/welcome/edit">edit</a></li>
 
-
-                <li><a href="/user/signin" class="btn white indigo-text">Login</a></li>
+                <li><a href="/user/signin" class="btn white indigo-text">Signin</a></li>
+                <li>Welcome <%= typeof name != 'undefined' ? name : '' %> [ <%= typeof id != 'undefined' ? id : '' %> ]
+                </li>
             </ul>
         </div>
     </nav>
@@ -28,9 +29,7 @@
 
 
 
-<center>
-    <h4>Welcome <%= typeof name != 'undefined' ? name : '' %> [ <%= typeof id != 'undefined' ? id : '' %> ]</h4>
-</center>
+
 <!-- <form action="/welcome/new" method='GET'>
     <center><input type="button" val="<%= typeof val != 'undefined' ? val : '' %>" value="CLICK">
     </center>

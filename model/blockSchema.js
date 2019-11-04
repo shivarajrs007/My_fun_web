@@ -9,6 +9,12 @@ const blockSchema = new mongoose.Schema({
     Qty_2018: Number,
     Qty_2019: Number,
 
+    hash: String,
+    prevHash: String,
+    timeStamp: String,
+    index: Number,
+    Nonce: Number,
+
 
 
 })
