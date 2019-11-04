@@ -1,0 +1,41 @@
+<div class="navbar-fixed ">
+    <nav class="nav-wrapper  deep-purple darken-4">
+        <div class="container">
+            <a href="#" class="brand-logo">BlockChain POC</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/welcome/new">NewBlock</a></li>
+                <li><a href="/welcome/edit">edit</a></li>
+
+
+                <li><a href="/user/signin" class="btn white indigo-text">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-links">
+    <li><a href="">Home</a></li>
+    <li><a href="/welcome/new">NewBlock</a></li>
+    <li><a href="/welcome/edit">edit</a></li>
+
+
+</ul>
+
+
+
+
+<center>
+    <h4>Welcome <%= typeof name != 'undefined' ? name : '' %> [ <%= typeof id != 'undefined' ? id : '' %> ]</h4>
+</center>
+<!-- <form action="/welcome/new" method='GET'>
+    <center><input type="button" val="<%= typeof val != 'undefined' ? val : '' %>" value="CLICK">
+    </center>
+</form> -->
+
+<div class="container">
+    <h1>Your block in Blockchain</h1>
+</div>

@@ -16,7 +16,7 @@ app.use(express.static('public'))
 
 //DATABASE
 const db = require('./model/Config').dbUrl;
-mongoose.connect(db, { useNewUrlParser: true })
+mongoose.connect("mongodb://localhost/blockchain", { useNewUrlParser: true })
     .then(() => {
         console.log('mongodb Connected...');
 
@@ -34,6 +34,9 @@ app.use('/signup', require('./Routers/signup'))
 app.use('/dashbord', require('./Routers/dashbord'))
 app.use('/forget', require('./Routers/forget'))
 app.use('/update', require('./Routers/update'))
+app.use('/welcome', require('./Routers/welcome'))
+app.use('/ASS', require('./Routers/Assemblyline'))
+
 
 
 port = process.env.PORT || 4000

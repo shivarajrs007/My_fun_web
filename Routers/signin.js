@@ -1,8 +1,12 @@
 const express = require('express')
 const router = express.Router();
+var localStorage = require('localStorage')
 
 
-const blockchainDb = require('../model/blockSchema')
+
+
+
+const usersDb = require('../model/userScema')
 
 router.post('/signin', (req, res) => {
     let data = []
@@ -10,14 +14,14 @@ router.post('/signin', (req, res) => {
         Email: req.body.email,
         Password: req.body.pass
     }
-    console.log(elements)
+    //console.log(elements)
 
 
     async function EmailVarification() {
 
-        const blocks = await blockchainDb.findOne({ Email: elements.Email })
-        console.log(blocks);
-        data.push(blocks)
+        const blocks = await usersDb.findOne({ Email: elements.Email })
+        //console.log(blocks);
+        //data.push(blocks)
         // console.log(data);
 
 
@@ -32,9 +36,21 @@ router.post('/signin', (req, res) => {
             })
         }
         else {
-            res.render('update', {
-                data: data
+            localStorage.setItem('myData', JSON.stringify(blocks));
+            myValue = localStorage.getItem('myData');
+            let jsonvalue = JSON.parse(myValue);
+
+            let idVal = jsonvalue.ID;
+            //console.log(idVal.slice(0, 3));
+
+
+            res.render('welcome', {
+                name: jsonvalue.Name,
+                id: jsonvalue.ID,
+                val: idVal.slice(0, 3)
             })
+
+
         }
 
 
