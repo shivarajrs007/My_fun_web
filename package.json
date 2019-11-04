@@ -19,5 +19,14 @@
     "localStorage": "^1.0.4",
     "mongoose": "^5.7.7",
     "nodemailer": "^6.3.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivarajrs007/My_fun_web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shivarajrs007/My_fun_web/issues"
+  },
+  "homepage": "https://github.com/shivarajrs007/My_fun_web#readme"
 }

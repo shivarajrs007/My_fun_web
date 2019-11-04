@@ -1,11 +1,17 @@
 const express = require('express')
 const router = express.Router()
+var localStorage = require('localStorage')
 
 const Hash = require('../Hash/hash')
 const blockchainDb = require('../model/blockSchema')
 let database = [];
 
 router.post('/Ass', (req, res) => {
+    myValue = localStorage.getItem('myData');
+    let jsonvalue = JSON.parse(myValue);
+
+    let idVal = jsonvalue.ID;
+    console.log(idVal);
     //console.log(req.body);
     const data = (req.body.partnumber +
         req.body.equpType +
@@ -42,6 +48,7 @@ router.post('/Ass', (req, res) => {
                 timeStamp: time,
                 index: inx,
                 Nonce: nonce,
+                ID: idVal,
 
             }
             //console.log(inputs);
@@ -82,6 +89,7 @@ router.post('/Ass', (req, res) => {
             timeStamp: time,
             index: inx,
             Nonce: nonce,
+            ID: idVal
 
         }
         console.log(inputs);

@@ -1,3 +1,25 @@
+<div class="navbar-fixed ">
+    <nav class="nav-wrapper  deep-purple darken-4">
+        <div class="container">
+            <a href="#" class="brand-logo">BlockChain POC</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+
+
+                <li><a href="/user/signin" class="btn white indigo-text">Signin</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-links">
+    <li><a href="">Home</a></li>
+
+</ul>
+
 <div class="centerOne">
     <div class="row">
         <div class="col s12 m4">
@@ -6,7 +28,7 @@
                     <center><span class="card-title">
                             <h4>Inventory</h4>
                         </span></center>
-                    <form action='/signin/signin' method='post'>
+                    <form action='/INV/inv' method='post'>
                         <div class="red-text">
                             <center> <%= typeof msg != 'undefined' ? msg : '' %></center>
                         </div>

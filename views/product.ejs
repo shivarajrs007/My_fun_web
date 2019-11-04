@@ -28,11 +28,18 @@
             <div class='card  white'>
                 <div class="card-content indigo-text ">
                     <center><span class="card-title">
-                            <h4>Assembly Line</h4>
+                            <h4>
+                                <center> <%= typeof product != 'undefined' ? product : '' %></center>
+                            </h4>
                         </span></center>
-                    <form action='/ASS/Ass' method='post'>
+                    <form action='/product/pro' method='post'>
                         <div class="red-text">
                             <center> <%= typeof msg != 'undefined' ? msg : '' %></center>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">center_focus_strong</i>
+                            <input type="text" id="index" name='index' required>
+                            <label for="index">Block Index</label>
                         </div>
                         <div class="input-field">
                             <i class="material-icons prefix">center_focus_strong</i>

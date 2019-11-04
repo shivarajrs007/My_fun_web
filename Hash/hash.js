@@ -29,9 +29,9 @@ function Pow(prevHash, input) {
         nonce = nonce + 1;
 
     }
-    console.log(nonce);
+    // console.log(nonce);
 
-    console.log(hash);
+    // console.log(hash);
 
     return nonce - 1;
 }

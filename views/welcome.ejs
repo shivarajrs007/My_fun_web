@@ -38,3 +38,31 @@
 <div class="container">
     <h1>Your block in Blockchain</h1>
 </div>
+<ul>
+    <% data.forEach((data)=>{%>
+
+    <div class="centerThree">
+
+        <div class="row">
+            <div class="col s12 m4">
+
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <div class="card-panel teal">
+                            <center><%=data.index%></center>
+                        </div>
+
+                        <p><strong>Part number : </strong> <%=data.partNumber%></p>
+                        <p><strong>Equip Type :</strong><%=data.equipType%></p>
+                        <p><strong>Saleable part :</strong><%=data.scalablepart%></p>
+
+                        <p> <strong>Qty (2018):</strong><%=data.Qty_2018%></p>
+
+                        <p><strong>Qty (2019):</strong><%=data.Qty_2019%></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%});%>
+</ul>

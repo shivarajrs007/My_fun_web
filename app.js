@@ -16,7 +16,7 @@ app.use(express.static('public'))
 
 //DATABASE
 const db = require('./model/Config').dbUrl;
-mongoose.connect("mongodb://localhost/blockchain", { useNewUrlParser: true })
+mongoose.connect("mongodb://localhost/blockchain", { useFindAndModify: false })
     .then(() => {
         console.log('mongodb Connected...');
 
@@ -36,6 +36,11 @@ app.use('/forget', require('./Routers/forget'))
 app.use('/update', require('./Routers/update'))
 app.use('/welcome', require('./Routers/welcome'))
 app.use('/ASS', require('./Routers/Assemblyline'))
+app.use('/INV', require('./Routers/inventory'))
+app.use('/WARE', require('./Routers/warehouse'))
+app.use('/product', require('./Routers/product'))
+
+
 
 
 

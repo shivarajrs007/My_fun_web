@@ -14,6 +14,7 @@ const blockSchema = new mongoose.Schema({
     timeStamp: String,
     index: Number,
     Nonce: Number,
+    ID: String,
 
 
 

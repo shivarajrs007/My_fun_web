@@ -6,6 +6,7 @@ nodeMailer = require('nodemailer')
 
 const blockchainDb = require('../model/blockSchema')
 
+
 router.post('/update', (req, res) => {
     let data = []
     let emails = []
