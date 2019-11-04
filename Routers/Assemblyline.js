@@ -6,7 +6,7 @@ const Hash = require('../Hash/hash')
 const blockchainDb = require('../model/blockSchema')
 let database = [];
 
-router.post('/Ass', (req, res) => {
+router.post('/part', (req, res) => {
     myValue = localStorage.getItem('myData');
     let jsonvalue = JSON.parse(myValue);
 
@@ -55,9 +55,9 @@ router.post('/Ass', (req, res) => {
             let newBlock = new blockchainDb(inputs)
             newBlock.save()
                 .then(doc => {
-                    // res.render('sucussful', {
-                    //     suc: 'Register Successfully'
-                    // })
+                    res.render('sucussful', {
+                        suc: 'Register Successfully'
+                    })
                     console.log(doc)
                 })
                 .catch(err => {

@@ -7,36 +7,29 @@
             </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="/">Home</a></li>
-                <li><a href="/welcome/new">New Block</a></li>
-                <li><a href="/welcome/edit">Edit</a></li>
+                <li><a href="/part/inventory">Inventory</a></li>
+                <li><a href="/part/Assembly">Assembly Line</a></li>
+                <li><a href="/part/warehouse">Warehouse</a></li>
 
-                <li><a href="/user/signin" class="btn white indigo-text">Sign In</a></li>
+
+                <li><a href="/user/signin" class="btn white indigo-text">Sing In</a></li>
                 <li>Welcome <%= typeof name != 'undefined' ? name : '' %> [ <%= typeof id != 'undefined' ? id : '' %> ]
-                </li>
             </ul>
         </div>
     </nav>
 </div>
 
 <ul class="sidenav" id="mobile-links">
-    <li><a href="">Home</a></li>
-    <li><a href="/welcome/new">NewBlock</a></li>
-    <li><a href="/welcome/edit">edit</a></li>
-
+    <li><a href="/">Home</a></li>
+    <li><a href="/part/inventory">Inventory</a></li>
+    <li><a href="/part/Assembly">Assembly Line</a></li>
+    <li><a href="/part/warehouse">Warehouse</a></li>
+    <li><a href="/user/signin" class="btn white indigo-text">Sing In</a></li>
 
 </ul>
 
-
-
-
-
-<!-- <form action="/welcome/new" method='GET'>
-    <center><input type="button" val="<%= typeof val != 'undefined' ? val : '' %>" value="CLICK">
-    </center>
-</form> -->
-
 <div class="container">
-    <h1>Your block in Blockchain</h1>
+    <h1> blocks in Blockchain</h1>
 </div>
 <ul>
     <% data.forEach((data)=>{%>

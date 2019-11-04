@@ -1,5 +1,5 @@
 <div class="navbar-fixed ">
-    <nav class="nav-wrapper  deep-purple darken-4">
+    <nav class="nav-wrapper   E4551F">
         <div class="container">
             <a href="#" class="brand-logo">BlockChain POC</a>
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
@@ -28,9 +28,11 @@
             <div class='card  white'>
                 <div class="card-content indigo-text ">
                     <center><span class="card-title">
-                            <h4>Assembly Line</h4>
+                            <h4>
+                                <center> <%= typeof part != 'undefined' ? part : '' %></center>
+                            </h4>
                         </span></center>
-                    <form action='/ASS/Ass' method='post'>
+                    <form action='/Parts/part' method='post'>
                         <div class="red-text">
                             <center> <%= typeof msg != 'undefined' ? msg : '' %></center>
                         </div>

@@ -10,13 +10,20 @@ router.get('/new', (req, res) => {
     //console.log(idVal.slice(0, 3));
 
     if (idVal.slice(0, 3) == "ASS") {
-        res.render('Assemblyline')
+        res.render('Parts', {
+            part: 'Assemblyline'
+        })
     }
     else if (idVal.slice(0, 3) == "INV") {
-        res.render('inventory')
+
+        res.render('Parts', {
+            part: 'Inventory'
+        })
     }
     else {
-        res.render('warehouse')
+        res.render('Parts', {
+            part: 'Warehouse'
+        })
 
     }
 

@@ -35,12 +35,38 @@ app.use('/dashbord', require('./Routers/dashbord'))
 app.use('/forget', require('./Routers/forget'))
 app.use('/update', require('./Routers/update'))
 app.use('/welcome', require('./Routers/welcome'))
-app.use('/ASS', require('./Routers/Assemblyline'))
+app.use('/Parts', require('./Routers/Assemblyline'))
 app.use('/INV', require('./Routers/inventory'))
 app.use('/WARE', require('./Routers/warehouse'))
 app.use('/product', require('./Routers/product'))
 
 
+
+//ADMIN DATABASE
+const AdminDB = require('./model/AdminSchema')
+
+
+async function Admin() {
+    const admin = {
+        Name: "Admin",
+        Email: "Admin@admin",
+        password: "Admin",
+        ID: "ADM123"
+    }
+    let newBlock = new AdminDB(admin)
+    newBlock.save()
+        .then(doc => {
+            // res.render('sucussful', {
+            //     suc: 'Register Successfully',
+            //     id: id
+            // })
+            console.log(doc)
+        })
+        .catch(err => {
+            console.error(err)
+        })
+}
+//Admin()
 
 
 

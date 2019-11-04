@@ -32,11 +32,11 @@ router.post('/pro', (req, res) => {
         }, { new: true })
         // console.log(blocks);
         database.push(blocks)
-        console.log(database);
+        //console.log(database);
 
-        // res.render('update', {
-        //     data: data
-        // })
+        res.render('sucussful', {
+            suc: 'Register Successfully'
+        })
     }
     dbUpadte()
 
