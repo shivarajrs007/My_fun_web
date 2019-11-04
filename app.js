@@ -28,17 +28,15 @@ mongoose.connect("mongodb://localhost/blockchain", { useFindAndModify: false })
 
 app.use("/", require('./Routers/home'))
 app.use('/user', require('./Routers/user'))
-app.use('/part', require('./Routers/Part'))
+
 app.use('/signin', require('./Routers/signin'))
 app.use('/signup', require('./Routers/signup'))
-app.use('/dashbord', require('./Routers/dashbord'))
 app.use('/forget', require('./Routers/forget'))
-app.use('/update', require('./Routers/update'))
+
 app.use('/welcome', require('./Routers/welcome'))
-app.use('/Parts', require('./Routers/Assemblyline'))
-app.use('/INV', require('./Routers/inventory'))
-app.use('/WARE', require('./Routers/warehouse'))
+app.use('/Parts', require('./Routers/Parts'))
 app.use('/product', require('./Routers/product'))
+app.use('/part', require('./Routers/Admin'))
 
 
 

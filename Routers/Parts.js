@@ -1,18 +1,35 @@
 const express = require('express')
 const router = express.Router()
+var localStorage = require('localStorage')
 
 const Hash = require('../Hash/hash')
 const blockchainDb = require('../model/blockSchema')
 let database = [];
+let select = ''
 
-router.post('/ware', (req, res) => {
+router.post('/part', (req, res) => {
+    myValue = localStorage.getItem('myData');
+    let jsonvalue = JSON.parse(myValue);
+
+    let idVal = jsonvalue.ID;
+    console.log(idVal);
     //console.log(req.body);
     const data = (req.body.partnumber +
         req.body.equpType +
         req.body.Scale +
         req.body.Qty1 +
         req.body.Qty2).toString()
+    if (idVal.slice(0, 3) == "ASS") {
+        select = "Assembly"
+    }
+    else if (idVal.slice(0, 3) == "INV") {
 
+        select = "Inventory"
+    }
+    else {
+        select = "warehouse"
+
+    }
 
 
     async function BlockDb() {
@@ -25,7 +42,7 @@ router.post('/ware', (req, res) => {
         if (blocks.length === 0) {
             const prevhash = "GENESISHASH"
             const time = Date()
-            const inx = blocks.length + 1
+            const inx = "Block " + (blocks.length + 1)
 
             nonce = Hash.Pow(prevhash, data)
             cHash = Hash.Hash(prevhash, nonce, data)
@@ -42,15 +59,17 @@ router.post('/ware', (req, res) => {
                 timeStamp: time,
                 index: inx,
                 Nonce: nonce,
+                ID: idVal,
+                Section: select,
 
             }
             //console.log(inputs);
             let newBlock = new blockchainDb(inputs)
             newBlock.save()
                 .then(doc => {
-                    // res.render('sucussful', {
-                    //     suc: 'Register Successfully'
-                    // })
+                    res.render('sucussful', {
+                        suc: 'Register Successfully'
+                    })
                     console.log(doc)
                 })
                 .catch(err => {
@@ -65,7 +84,7 @@ router.post('/ware', (req, res) => {
 
         const prevhash = database[blocks.length - 1].hash
         const time = Date()
-        const inx = blocks.length + 1
+        const inx = "Block " + (blocks.length + 1)
 
         nonce = Hash.Pow(prevhash, data)
         cHash = Hash.Hash(prevhash, nonce, data)
@@ -82,15 +101,18 @@ router.post('/ware', (req, res) => {
             timeStamp: time,
             index: inx,
             Nonce: nonce,
+            ID: idVal,
+            Section: select,
+
 
         }
         console.log(inputs);
         let newBlock = new blockchainDb(inputs)
         newBlock.save()
             .then(doc => {
-                // res.render('sucussful', {
-                //     suc: 'Register Successfully'
-                // })
+                res.render('sucussful', {
+                    suc: 'Register Successfully'
+                })
                 console.log(doc)
             })
             .catch(err => {

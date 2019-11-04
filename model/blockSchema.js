@@ -12,9 +12,10 @@ const blockSchema = new mongoose.Schema({
     hash: String,
     prevHash: String,
     timeStamp: String,
-    index: Number,
+    index: String,
     Nonce: Number,
     ID: String,
+    Section: String,
 
 
 

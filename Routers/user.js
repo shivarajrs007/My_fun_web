@@ -11,8 +11,6 @@ router.get('/signup', (req, res) => {
 router.get('/forget', (req, res) => {
     res.render('forget')
 })
-router.get('/update', (req, res) => {
-    res.render('update')
-})
+
 
 module.exports = router;
