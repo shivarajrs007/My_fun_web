@@ -44,13 +44,10 @@ router.post('/signin', (req, res) => {
 
 
             const user = await usersDb.findOne({ Email: elements.Email })
+            //console.log(user);
 
-            localStorage.setItem('myData', JSON.stringify(user));
-            myValue = localStorage.getItem('myData');
-            let jsonvalue = JSON.parse(myValue);
 
-            let idVal = jsonvalue.ID;
-            //console.log(idVal.slice(0, 3));
+
 
 
             if (user == null) {
@@ -64,6 +61,12 @@ router.post('/signin', (req, res) => {
                 })
             }
             else {
+                localStorage.setItem('myData', JSON.stringify(user));
+                myValue = localStorage.getItem('myData');
+                let jsonvalue = JSON.parse(myValue);
+
+                let idVal = jsonvalue.ID;
+                //console.log(idVal.slice(0, 3));
                 const blocks = await blockchainDb.find({ ID: idVal })
                 //console.log(blocks);
                 data.push(...blocks)
