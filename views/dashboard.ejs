@@ -30,28 +30,29 @@
 
 </ul>
 
-<center>
+<div class="container txt2">
     <h1> <%= typeof name != 'undefined' ? name : '' %> Blocks</h1>
-</center>
-
+</div>
 
 <ul>
     <% data.forEach((data)=>{%>
-    <div class="cardss">
-        <div class="cardHeader txt ">
-            <div class="colors">
-                <center><strong><%=data.index%></strong></center>
+    <div class="container">
+        <div class="cardss">
+            <div class="cardHeader txt ">
+                <div class="colors">
+                    <center><strong><%=data.index%></strong></center>
+                </div>
             </div>
-        </div>
 
-        <div class="txt">
-            <p><strong>Part number : </strong> <%=data.partNumber%></p>
-            <p><strong>Equip Type :</strong><%=data.equipType%></p>
-            <p><strong>Saleable part :</strong><%=data.scalablepart%></p>
+            <div class="txt">
+                <p><strong>Part number : </strong> <%=data.partNumber%></p>
+                <p><strong>Equip Type :</strong><%=data.equipType%></p>
+                <p><strong>Saleable part :</strong><%=data.scalablepart%></p>
 
-            <p> <strong>Qty (2018):</strong><%=data.Qty_2018%></p>
+                <p> <strong>Qty (2018):</strong><%=data.Qty_2018%></p>
 
-            <p><strong>Qty (2019):</strong><%=data.Qty_2019%></p>
+                <p><strong>Qty (2019):</strong><%=data.Qty_2019%></p>
+            </div>
         </div>
     </div>
 

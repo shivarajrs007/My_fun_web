@@ -11,7 +11,7 @@ let database = [];
 router.post('/pro', (req, res) => {
     myValue = localStorage.getItem('myData');
     let jsonvalue = JSON.parse(myValue);
-    //console.log(jsonvalue);
+    console.log(jsonvalue);
 
     let idVal = jsonvalue.ID;
 

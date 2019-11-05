@@ -34,27 +34,30 @@
     <center><input type="button" val="<%= typeof val != 'undefined' ? val : '' %>" value="CLICK">
     </center>
 </form> -->
-
 <div class="container">
-    <h1>Your block in Blockchain</h1>
-</div>
+    <div class="txt1">
+        <h1>Your block in Blockchain</h1>
+    </div>
+</div>>
 <ul>
     <% data.forEach((data)=>{%>
-    <div class="cardss">
-        <div class="cardHeader txt ">
-            <div class="colors">
-                <center><strong><%=data.index%></strong></center>
+    <div class="container">
+        <div class="cardss">
+            <div class="cardHeader txt ">
+                <div class="colors">
+                    <center><strong><%=data.index%></strong></center>
+                </div>
             </div>
-        </div>
 
-        <div class="txt">
-            <p><strong>Part number : </strong> <%=data.partNumber%></p>
-            <p><strong>Equip Type :</strong><%=data.equipType%></p>
-            <p><strong>Saleable part :</strong><%=data.scalablepart%></p>
+            <div class="txt">
+                <p><strong>Part number : </strong> <%=data.partNumber%></p>
+                <p><strong>Equip Type :</strong><%=data.equipType%></p>
+                <p><strong>Saleable part :</strong><%=data.scalablepart%></p>
 
-            <p> <strong>Qty (2018):</strong><%=data.Qty_2018%></p>
+                <p> <strong>Qty (2018):</strong><%=data.Qty_2018%></p>
 
-            <p><strong>Qty (2019):</strong><%=data.Qty_2019%></p>
+                <p><strong>Qty (2019):</strong><%=data.Qty_2019%></p>
+            </div>
         </div>
     </div>
 
