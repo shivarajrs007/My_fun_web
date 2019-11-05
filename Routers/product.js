@@ -11,7 +11,7 @@ let database = [];
 router.post('/pro', (req, res) => {
     myValue = localStorage.getItem('myData');
     let jsonvalue = JSON.parse(myValue);
-    console.log(jsonvalue);
+    //console.log(jsonvalue);
 
     let idVal = jsonvalue.ID;
 
@@ -30,8 +30,8 @@ router.post('/pro', (req, res) => {
                 index: req.body.index,
             }
         }, { new: true })
-        // console.log(blocks);
-        database.push(blocks)
+        //console.log(blocks);
+        //database.push(blocks)
         //console.log(database);
 
         res.render('sucussful', {
