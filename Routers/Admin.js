@@ -4,6 +4,8 @@ const router = express.Router();
 const blockchainDb = require('../model/blockSchema')
 
 
+
+
 router.get('/inventory', (req, res) => {
     let data = []
     async function Ass() {
@@ -12,8 +14,8 @@ router.get('/inventory', (req, res) => {
         data.push(...blocks)
         //console.log(data);
 
-        res.render('Inventory', {
-
+        res.render('dashboard', {
+            name: "Inventory",
             data: data
         })
     }
@@ -29,8 +31,8 @@ router.get('/Assembly', (req, res) => {
         data.push(...blocks)
         //console.log(data);
 
-        res.render('Assembly', {
-
+        res.render('dashboard', {
+            name: "Assembly Line",
             data: data
         })
     }
@@ -46,8 +48,8 @@ router.get('/warehouse', (req, res) => {
         data.push(...blocks)
         //console.log(data);
 
-        res.render('warehouse', {
-
+        res.render('dashboard', {
+            name: "Warehouse",
             data: data
         })
     }

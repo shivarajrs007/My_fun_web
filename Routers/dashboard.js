@@ -10,11 +10,11 @@ router.get('/dashboard', (req, res) => {
         const blocks = await blockchainDb.find()
         // console.log(admin.Name);
 
-        console.log(blocks);
+        //console.log(blocks);
         data.push(...blocks)
         //console.log(data);
 
-        res.render('dashboard', {
+        res.render('Admin', {
             name: admin.Name,
             id: admin.ID,
             data: data
