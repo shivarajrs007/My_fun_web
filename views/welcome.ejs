@@ -35,11 +35,16 @@
     </center>
 </form> -->
 <div class="centerwel">
-    <div class="cardwel  green accent-1">
+    <div class="cardwel  green lighten-4">
         <div class="container">
-            <div class="card-content white-text">
-                <h5><b><%= typeof block != 'undefined' ? block : '' %></b></h5>
-            </div>
+
+            <center>
+                <div class="card-content ">
+                    <h5><b><%= typeof block != 'undefined' ? block : '' %></b></h5>
+                </div>
+            </center>
+
+
         </div>
     </div>
 </div>
@@ -47,22 +52,14 @@
 <ul>
     <% data.forEach((data)=>{%>
     <div class="container">
-        <div class="cardss green accent-1">
-            <div class="cardHeader txt ">
-                <div class="colors">
-                    <center><strong><%=data.index%></strong></center>
-                </div>
-            </div>
-
+        <div class="cardList green lighten-4">
             <div class="txt">
-                <p><strong>Part number : </strong> <%=data.partNumber%></p>
-                <p><strong>Equip Type :</strong><%=data.equipType%></p>
-                <p><strong>Saleable part :</strong><%=data.scalablepart%></p>
-
-                <p> <strong>Qty (2018):</strong><%=data.Qty_2018%></p>
-
-                <p><strong>Qty (2019):</strong><%=data.Qty_2019%></p>
+                <b>Block : </b>
+                <p id="rcorners2" style="display:inline"> <%=data.index%></p>
             </div>
+
+
+
         </div>
     </div>
 
