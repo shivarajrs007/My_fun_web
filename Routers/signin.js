@@ -68,15 +68,26 @@ router.post('/signin', (req, res) => {
                 let idVal = jsonvalue.ID;
                 //console.log(idVal.slice(0, 3));
                 const blocks = await blockchainDb.find({ ID: idVal })
-                //console.log(blocks);
+                //console.log(blocks.length);
                 data.push(...blocks)
                 //console.log(data);
 
-                res.render('welcome', {
-                    name: jsonvalue.Name,
-                    id: jsonvalue.ID,
-                    data: data
-                })
+                if (blocks.length === 0) {
+                    res.render('welcome', {
+                        name: jsonvalue.Name,
+                        id: jsonvalue.ID,
+                        data: data,
+                        block: "Empty blocks in blockchain"
+                    })
+                }
+                else {
+                    res.render('welcome', {
+                        name: jsonvalue.Name,
+                        id: jsonvalue.ID,
+                        data: data,
+                        block: "Blocks in blockchain"
+                    })
+                }
 
 
             }
