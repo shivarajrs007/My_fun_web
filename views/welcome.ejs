@@ -10,7 +10,7 @@
                 <li><a href="/welcome/new">New Block</a></li>
                 <li><a href="/welcome/edit">Edit</a></li>
 
-                <li><a href="/user/signin" class="btn white indigo-text">Sign In</a></li>
+
                 <li>Welcome <%= typeof name != 'undefined' ? name : '' %> [ <%= typeof id != 'undefined' ? id : '' %> ]
                 </li>
             </ul>
@@ -42,7 +42,7 @@
 <ul>
     <% data.forEach((data)=>{%>
     <div class="container">
-        <div class="cardss">
+        <div class="cardss white">
             <div class="cardHeader txt ">
                 <div class="colors">
                     <center><strong><%=data.index%></strong></center>

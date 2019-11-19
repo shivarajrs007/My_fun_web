@@ -52,7 +52,7 @@ router.post('/signin', (req, res) => {
 
             if (user == null) {
                 res.render('signin', {
-                    msg: 'Email doesn\'t match'
+                    msg: 'User doesn\'t exists'
                 })
             }
             else if (elements.Password != user.Password) {
