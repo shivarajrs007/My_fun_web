@@ -35,7 +35,7 @@ router.post('/edit', (req, res) => {
         //console.log(database);
 
         res.render('productSuc', {
-            suc: 'Node successfully Modified'
+            suc: 'Block successfully Modified'
         })
     }
     dbUpadte()

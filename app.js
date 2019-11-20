@@ -16,7 +16,8 @@ app.use(express.static('public'))
 
 //DATABASE
 const db = require('./model/Config').dbUrl;
-mongoose.connect("mongodb://localhost/blockchain", { useFindAndModify: false })
+//const db = "mongodb://localhost/Blockchain"
+mongoose.connect(db, { useFindAndModify: false })
     .then(() => {
         console.log('mongodb Connected...');
 

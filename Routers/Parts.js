@@ -19,7 +19,7 @@ router.post('/part', (req, res) => {
         req.body.Scale +
         req.body.Qty1 +
         req.body.Qty2).toString()
-    if (idVal.slice(0, 3) == "ASS") {
+    if (idVal.slice(0, 3) == "ASL") {
         select = "Assembly"
     }
     else if (idVal.slice(0, 3) == "INV") {
@@ -40,7 +40,7 @@ router.post('/part', (req, res) => {
 
 
         if (blocks.length === 0) {
-            const prevhash = "GENESISHASH"
+            const prevhash = "GenesisHash"
             const time = Date()
             const inx = blocks.length + 1
 
@@ -68,7 +68,7 @@ router.post('/part', (req, res) => {
             newBlock.save()
                 .then(doc => {
                     res.render('nodeSuc', {
-                        suc: 'Node added sucessfully'
+                        suc: 'Block added sucessfully'
                     })
                     console.log(doc)
                 })
@@ -111,7 +111,7 @@ router.post('/part', (req, res) => {
         newBlock.save()
             .then(doc => {
                 res.render('nodeSuc', {
-                    suc: 'Node added sucessfully'
+                    suc: 'Block added sucessfully'
                 })
                 console.log(doc)
             })

@@ -8,18 +8,29 @@ router.get('/dashboard', (req, res) => {
     async function Admins() {
         const admin = await AdminDB.findOne()
         const blocks = await blockchainDb.find()
-        // console.log(admin.Name);
+        //console.log(admin.Name);
 
         //console.log(blocks);
         data.push(...blocks)
         //console.log(data);
 
-        res.render('Admin', {
-            name: admin.Name,
-            id: admin.ID,
-            data: data,
-            block: "Blocks in blockchain"
-        })
+        if (blocks.length === 0) {
+            res.render('Admin', {
+                name: admin.Name,
+                id: admin.ID,
+                data: data,
+                block: "No blocks in blockchain"
+            })
+        }
+        else {
+            res.render('Admin', {
+                name: admin.Name,
+                id: admin.ID,
+                data: data,
+                block: " Blocks in blockchain"
+            })
+
+        }
     }
     Admins()
 })

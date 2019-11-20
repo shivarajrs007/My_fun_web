@@ -1,62 +1,113 @@
 const express = require('express')
 const router = express.Router();
 
-const blockchainDb = require('../model/blockSchema')
+
 
 
 
 
 router.get('/inventory', (req, res) => {
+    const AdminDB = require('../model/AdminSchema')
+    const blockchainDb = require('../model/blockSchema')
     let data = []
-    async function Ass() {
+    async function Sec() {
         const blocks = await blockchainDb.find({ Section: "Inventory" })
+        const admin = await AdminDB.findOne()
+        //console.log(admin.Name);
+
         //console.log(blocks);
         data.push(...blocks)
         //console.log(data);
 
-        res.render('dashboard', {
-            name: "Inventory",
-            data: data,
-            block: "Blocks in blockchain"
-        })
+        if (blocks.length === 0) {
+            res.render('Admin', {
+                name: admin.Name,
+                id: admin.ID,
+                data: data,
+                block: "No blocks in blockchain"
+            })
+        }
+        else {
+            res.render('Admin', {
+                name: admin.Name,
+                id: admin.ID,
+                data: data,
+                block: " Blocks in blockchain"
+            })
+
+        }
     }
-    Ass()
+    Sec()
 
     //res.render('Inventory')
 })
 router.get('/Assembly', (req, res) => {
+    const AdminDB = require('../model/AdminSchema')
+    const blockchainDb = require('../model/blockSchema')
     let data = []
-    async function Ass() {
+    async function Asl() {
         const blocks = await blockchainDb.find({ Section: "Assembly" })
+        const admin = await AdminDB.findOne()
+        //console.log(admin.Name);
+
         //console.log(blocks);
         data.push(...blocks)
         //console.log(data);
 
-        res.render('dashboard', {
-            name: "Assembly Line",
-            data: data,
-            block: "Blocks in blockchain"
-        })
+        if (blocks.length === 0) {
+            res.render('Admin', {
+                name: admin.Name,
+                id: admin.ID,
+                data: data,
+                block: "No blocks in blockchain"
+            })
+        }
+        else {
+            res.render('Admin', {
+                name: admin.Name,
+                id: admin.ID,
+                data: data,
+                block: " Blocks in blockchain"
+            })
+
+        }
     }
-    Ass()
+    Asl()
     //res.render()
 })
 
 router.get('/warehouse', (req, res) => {
+    const AdminDB = require('../model/AdminSchema')
+    const blockchainDb = require('../model/blockSchema')
     let data = []
-    async function Ass() {
+    async function War() {
         const blocks = await blockchainDb.find({ Section: "warehouse" })
+        const admin = await AdminDB.findOne()
+        //console.log(admin.Name);
+
         //console.log(blocks);
         data.push(...blocks)
         //console.log(data);
 
-        res.render('dashboard', {
-            name: "Warehouse",
-            data: data,
-            block: "Blocks in blockchain"
-        })
+        if (blocks.length === 0) {
+            res.render('Admin', {
+                name: admin.Name,
+                id: admin.ID,
+                data: data,
+                block: "No blocks in blockchain"
+            })
+        }
+        else {
+            res.render('Admin', {
+                name: admin.Name,
+                id: admin.ID,
+                data: data,
+                block: " Blocks in blockchain"
+            })
+
+        }
     }
-    Ass()
+    War()
 
     //res.render('warehouse')
 })

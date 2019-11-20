@@ -1,12 +1,12 @@
 <div class="navbar-fixed ">
     <nav class="nav-wrapper deep-purple">
-        <div class="container">
+        <div class="container1">
             <a href="#" class="brand-logo">BlockChain POC</a>
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
                 <i class="material-icons">menu</i>
             </a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
+
 
                 <li><a href="/Admin/inventory">Inventory</a></li>
                 <li><a href="/Admin/Assembly">Assembly Line</a></li>
@@ -15,7 +15,7 @@
 
 
 
-                <li><a href="/user/signin" class="btn white indigo-text">Sign In</a></li>
+                <li><a href="/" class="btn white indigo-text">Sign Out</a></li>
                 <li>Welcome <%= typeof name != 'undefined' ? name : '' %> [ <%= typeof id != 'undefined' ? id : '' %> ]
             </ul>
         </div>
@@ -23,14 +23,13 @@
 </div>
 
 <ul class="sidenav" id="mobile-links">
-    <li><a href="/">Home</a></li>
+
     <li><a href="/Admin/inventory">Inventory</a></li>
     <li><a href="/Admin/Assembly">Assembly Line</a></li>
     <li><a href="/Admin/warehouse">Warehouse</a></li>
     <li><a href="/Smart/smart">Smart Contract</a></li>
 
-    <li><a href="/user/signin" class="btn white indigo-text">Sign In</a></li>
-
+    <li><a href="/" class="btn white indigo-text">Sign Out</a></li>
 </ul>
 <div class="centerwel">
     <div class="cardwel   grey lighten-2">
