@@ -11,7 +11,7 @@ router.get('/new', (req, res) => {
 
     if (idVal.slice(0, 3) == "ASS") {
         res.render('Parts', {
-            part: 'Assemblyline'
+            part: 'Assembly Line'
         })
     }
     else if (idVal.slice(0, 3) == "INV") {

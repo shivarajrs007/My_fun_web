@@ -36,7 +36,7 @@ app.use('/forget', require('./Routers/forget'))
 app.use('/welcome', require('./Routers/welcome'))
 app.use('/Parts', require('./Routers/Parts'))
 app.use('/product', require('./Routers/product'))
-app.use('/part', require('./Routers/Admin'))
+app.use('/Admin', require('./Routers/Admin'))
 app.use('/dashboard', require('./Routers/dashboard'))
 app.use('/back', require('./Routers/back'))
 
@@ -66,7 +66,7 @@ async function Admin() {
             console.error(err)
         })
 }
-//Admin()
+Admin()
 
 
 

@@ -16,7 +16,8 @@ router.get('/inventory', (req, res) => {
 
         res.render('dashboard', {
             name: "Inventory",
-            data: data
+            data: data,
+            block: "Blocks in blockchain"
         })
     }
     Ass()
@@ -33,7 +34,8 @@ router.get('/Assembly', (req, res) => {
 
         res.render('dashboard', {
             name: "Assembly Line",
-            data: data
+            data: data,
+            block: "Blocks in blockchain"
         })
     }
     Ass()
@@ -50,7 +52,8 @@ router.get('/warehouse', (req, res) => {
 
         res.render('dashboard', {
             name: "Warehouse",
-            data: data
+            data: data,
+            block: "Blocks in blockchain"
         })
     }
     Ass()

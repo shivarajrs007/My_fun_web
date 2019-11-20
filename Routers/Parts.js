@@ -42,7 +42,7 @@ router.post('/part', (req, res) => {
         if (blocks.length === 0) {
             const prevhash = "GENESISHASH"
             const time = Date()
-            const inx = "Block " + (blocks.length + 1)
+            const inx = blocks.length + 1
 
             nonce = Hash.Pow(prevhash, data)
             cHash = Hash.Hash(prevhash, nonce, data)
@@ -67,8 +67,8 @@ router.post('/part', (req, res) => {
             let newBlock = new blockchainDb(inputs)
             newBlock.save()
                 .then(doc => {
-                    res.render('sucussful', {
-                        suc: 'Register Successfully'
+                    res.render('nodeSuc', {
+                        suc: 'Node added sucessfully'
                     })
                     console.log(doc)
                 })
@@ -84,7 +84,7 @@ router.post('/part', (req, res) => {
 
         const prevhash = database[blocks.length - 1].hash
         const time = Date()
-        const inx = "Block " + (blocks.length + 1)
+        const inx = blocks.length + 1
 
         nonce = Hash.Pow(prevhash, data)
         cHash = Hash.Hash(prevhash, nonce, data)
@@ -110,8 +110,8 @@ router.post('/part', (req, res) => {
         let newBlock = new blockchainDb(inputs)
         newBlock.save()
             .then(doc => {
-                res.render('sucussful', {
-                    suc: 'Register Successfully'
+                res.render('nodeSuc', {
+                    suc: 'Node added sucessfully'
                 })
                 console.log(doc)
             })

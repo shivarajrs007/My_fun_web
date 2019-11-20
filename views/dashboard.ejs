@@ -1,5 +1,5 @@
 <div class="navbar-fixed ">
-    <nav class="nav-wrapper  orange darken-4">
+    <nav class="nav-wrapper  deep-purple">
         <div class="container">
             <a href="#" class="brand-logo">BlockChain POC</a>
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
@@ -7,9 +7,10 @@
             </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="/">Home</a></li>
-                <li><a href="/part/inventory">Inventory</a></li>
-                <li><a href="/part/Assembly">Assembly Line</a></li>
-                <li><a href="/part/warehouse">Warehouse</a></li>
+                <li><a href="/Admin/inventory">Inventory</a></li>
+                <li><a href="/Admin/Assembly">Assembly Line</a></li>
+                <li><a href="/Admin/warehouse">Warehouse</a></li>
+
                 <li><a href="/dashboard/dashboard">Dashboard</a></li>
 
 
@@ -22,40 +23,77 @@
 
 <ul class="sidenav" id="mobile-links">
     <li><a href="/">Home</a></li>
-    <li><a href="/part/inventory">Inventory</a></li>
-    <li><a href="/part/Assembly">Assembly Line</a></li>
-    <li><a href="/part/warehouse">Warehouse</a></li>
-    <li><a href="/dashboard/dashboard">Dashboard</a></li>
+    <li><a href="/Admin/inventory">Inventory</a></li>
+    <li><a href="/Admin/Assembly">Assembly Line</a></li>
+    <li><a href="/Admin/warehouse">Warehouse</a></li>
+
     <li><a href="/user/signin" class="btn white indigo-text">Sing In</a></li>
 
 </ul>
+<div class="centerwel">
+    <div class="cardwel   grey lighten-2">
+        <div class="container">
 
-<div class="container txt2">
-    <h1> <%= typeof name != 'undefined' ? name : '' %> Blocks</h1>
+            <center>
+                <div class="card-content ">
+                    <h5><b><%= typeof block != 'undefined' ? block : '' %></b></h5>
+                </div>
+            </center>
+
+
+        </div>
+    </div>
 </div>
 
 <ul>
     <% data.forEach((data)=>{%>
-    <div class="container">
-        <div class="cardss">
-            <div class="cardHeader txt ">
-                <div class="colors">
-                    <center><strong><%=data.index%></strong></center>
-                </div>
-            </div>
 
-            <div class="txt">
-                <!-- <%=data.Section%><strong>Section : </strong><%=data.Section%></%=data.Section%> -->
-                <p><strong>Part number : </strong> <%=data.partNumber%></p>
-                <p><strong>Equip Type :</strong><%=data.equipType%></p>
-                <p><strong>Saleable part :</strong><%=data.scalablepart%></p>
 
-                <p> <strong>Qty (2018):</strong><%=data.Qty_2018%></p>
-
-                <p><strong>Qty (2019):</strong><%=data.Qty_2019%></p>
+    <div class="cardList  grey lighten-2">
+        <div class="cardHeader white-text ">
+            <div class="text4">
+                <b>Block #<%=data.index%></b>
             </div>
         </div>
+        <div class="txt">
+            <b>Section : </b>
+            <input type="text" id="input1" value="<%=data.Section%>%>">
+        </div>
+        <div class="txt">
+            <b>Part No : </b>
+            <input type="text" id="input1" value="<%=data.partNumber%>%>">
+        </div>
+
+        <div class="txt">
+            <b>Equip Type : </b>
+            <input type="text" id="input1" value="<%=data.equipType%>">
+        </div>
+        <div class="txt">
+            <b>Scalable:</b>
+            <input type="text" id="input1" value="<%=data.scalablepart%>">
+        </div>
+        <div class="txt">
+            <b>Qty(2018) : </b>
+            <input type="text" id="input1" value="<%=data.Qty_2018%>">
+        </div>
+        <div class="txt">
+            <b>Qty(2019) : </b>
+            <input type="text" id="input1" value="<%=data.Qty_2019%>">
+        </div>
+        <div class="txt">
+            <b>Hash : </b>
+            <input type="text" id="input1" value="<%=data.hash%>" disabled>
+        </div>
+        <div class="txt">
+            <b>Prev-Hash : </b>
+            <input type="text" id="input1" value="<%=data.prevHash%>" disabled>
+        </div>
+
+
+
     </div>
+
+
 
     <%});%>
 </ul>

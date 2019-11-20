@@ -8,7 +8,7 @@ let database = [];
 
 
 
-router.post('/pro', (req, res) => {
+router.post('/edit', (req, res) => {
     myValue = localStorage.getItem('myData');
     let jsonvalue = JSON.parse(myValue);
     //console.log(jsonvalue);
@@ -34,8 +34,8 @@ router.post('/pro', (req, res) => {
         //database.push(blocks)
         //console.log(database);
 
-        res.render('sucussful', {
-            suc: 'Register Successfully'
+        res.render('productSuc', {
+            suc: 'Node successfully Modified'
         })
     }
     dbUpadte()

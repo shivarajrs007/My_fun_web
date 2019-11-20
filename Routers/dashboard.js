@@ -17,7 +17,8 @@ router.get('/dashboard', (req, res) => {
         res.render('Admin', {
             name: admin.Name,
             id: admin.ID,
-            data: data
+            data: data,
+            block: "Blocks in blockchain"
         })
     }
     Admins()

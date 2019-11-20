@@ -1,5 +1,5 @@
 <div class="navbar-fixed ">
-    <nav class="nav-wrapper  orange darken-4">
+    <nav class="nav-wrapper   deep-purple">
         <div class="container">
             <a href="#" class="brand-logo">BlockChain POC</a>
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
@@ -31,9 +31,14 @@
                                     <center> <%= typeof part != 'undefined' ? part : '' %></center>
                                 </h4>
                             </span></center>
-                        <form action='/Parts/part' method='post'>
+                        <form action='/product/edit' method='post'>
                             <div class="red-text">
                                 <center> <%= typeof msg != 'undefined' ? msg : '' %></center>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">center_focus_strong</i>
+                                <input type="text" id="index" name='index' required>
+                                <label for="index">Block index</label>
                             </div>
                             <div class="input-field">
                                 <i class="material-icons prefix">center_focus_strong</i>
