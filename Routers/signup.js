@@ -15,7 +15,7 @@ router.post('/register', (req, res) => {
 
 
     if (selectopt === "Assembly Line") {
-        id = idGenerate("ASS")
+        id = idGenerate("ASL")
     }
     else if (selectopt === "Inventory") {
         id = idGenerate("INV")
@@ -34,30 +34,42 @@ router.post('/register', (req, res) => {
     }
     async function userDb() {
         let Db = await usersDB.find();
-        console.log(Db.indexOf(req.body.email));
+        // console.log(Db);
+        let match = false;
+        for (let i = 0; i < Db.length; i++) {
 
+            if (Db[i].Email == req.body.email) {
+                match = true;
+                break;
+            }
+        }
+        if (match == true) {
+            res.render('signup', {
+                psw: "Email already exists"
+            })
+        }
 
-
-
-        if (req.body.pass1 !== req.body.pass2) {
+        else if (req.body.pass1 !== req.body.pass2) {
             res.render('signup', {
                 psw: "Password doen't match"
             })
         }
 
-        let newBlock = new usersDB(user)
-        newBlock.save()
-            .then(doc => {
-                res.render('sucussful', {
-                    suc: 'Register Successfully',
-                    id: id
+        else {
+            let newBlock = new usersDB(user)
+            newBlock.save()
+                .then(doc => {
+                    res.render('sucussful', {
+                        suc: 'Register Successfully',
+                        id: id
+                    })
+                    //console.log(doc)
                 })
-                console.log(doc)
-            })
-            .catch(err => {
-                console.error(err)
-            })
+                .catch(err => {
+                    console.error(err)
+                })
 
+        }
     }
     userDb()
 

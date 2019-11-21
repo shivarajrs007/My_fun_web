@@ -9,7 +9,7 @@ router.get('/new', (req, res) => {
     let idVal = jsonvalue.ID;
     //console.log(idVal.slice(0, 3));
 
-    if (idVal.slice(0, 3) == "ASS") {
+    if (idVal.slice(0, 3) == "ASL") {
         res.render('Parts', {
             part: 'Assembly Line'
         })
