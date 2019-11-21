@@ -27,7 +27,7 @@ router.post('/part', (req, res) => {
         select = "Inventory"
     }
     else {
-        select = "warehouse"
+        select = "Warehouse"
 
     }
 
@@ -36,7 +36,7 @@ router.post('/part', (req, res) => {
         let blocks = await blockchainDb.find()
         let nonce = 0
         let cHash = ''
-        console.log(blocks.length);
+        //console.log(blocks.length);
 
 
         if (blocks.length === 0) {
@@ -70,7 +70,7 @@ router.post('/part', (req, res) => {
                     res.render('nodeSuc', {
                         suc: 'Block added sucessfully'
                     })
-                    console.log(doc)
+                    //console.log(doc)
                 })
                 .catch(err => {
                     console.error(err)
@@ -113,7 +113,7 @@ router.post('/part', (req, res) => {
                 res.render('nodeSuc', {
                     suc: 'Block added sucessfully'
                 })
-                console.log(doc)
+                //console.log(doc)
             })
             .catch(err => {
                 console.error(err)

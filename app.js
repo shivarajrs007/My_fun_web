@@ -16,7 +16,7 @@ app.use(express.static('public'))
 
 //DATABASE
 //const db = require('./model/Config').dbUrl;
-const db = "mongodb://localhost/Blockchain"
+const db = "mongodb://localhost/blockchain"
 mongoose.connect(db, { useFindAndModify: false })
     .then(() => {
         console.log('mongodb Connected...');
@@ -68,7 +68,7 @@ async function Admin() {
             console.error(err)
         })
 }
-Admin()
+//Admin()
 
 
 
