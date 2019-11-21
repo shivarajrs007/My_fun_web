@@ -45,56 +45,57 @@
         </div>
     </div>
 </div>
+<div class="dis">
+    <ul>
+        <% data.forEach((data)=>{%>
 
-<ul>
-    <% data.forEach((data)=>{%>
 
-
-    <div class="cardList  grey lighten-2">
-        <div class="cardHeader white-text ">
-            <div class="text4">
-                <b>Block #<%=data.index%></b>
+        <div class="cardList  grey lighten-2">
+            <div class="cardHeader white-text ">
+                <div class="text4">
+                    <b>Block #<%=data.index%></b>
+                </div>
             </div>
-        </div>
-        <div class="txt">
-            <b>Section : </b>
-            <input type="text" id="input1" value="<%=data.Section%>%>">
-        </div>
-        <div class="txt">
-            <b>Part No : </b>
-            <input type="text" id="input1" value="<%=data.partNumber%>%>">
-        </div>
+            <div class="txt">
+                <b>Section : </b>
+                <input type="text" id="input1" value="<%=data.Section%>%>">
+            </div>
+            <div class="txt">
+                <b>Part No : </b>
+                <input type="text" id="input1" value="<%=data.partNumber%>%>">
+            </div>
 
-        <div class="txt">
-            <b>Equip Type : </b>
-            <input type="text" id="input1" value="<%=data.equipType%>">
-        </div>
-        <div class="txt">
-            <b>Scalable:</b>
-            <input type="text" id="input1" value="<%=data.scalablepart%>">
-        </div>
-        <div class="txt">
-            <b>Qty(2018) : </b>
-            <input type="text" id="input1" value="<%=data.Qty_2018%>">
-        </div>
-        <div class="txt">
-            <b>Qty(2019) : </b>
-            <input type="text" id="input1" value="<%=data.Qty_2019%>">
-        </div>
-        <div class="txt">
-            <b>Hash : </b>
-            <input type="text" id="input1" value="<%=data.hash%>" disabled>
-        </div>
-        <div class="txt">
-            <b>PrevHash : </b>
-            <input type="text" id="input1" value="<%=data.prevHash%>" disabled>
-        </div>
-
-
-
-    </div>
+            <div class="txt">
+                <b>Equip Type : </b>
+                <input type="text" id="input1" value="<%=data.equipType%>">
+            </div>
+            <div class="txt">
+                <b>Saleable part :</b>
+                <input type="text" id="input1" value="<%=data.scalablepart%>">
+            </div>
+            <div class="txt">
+                <b>Qty(2018) : </b>
+                <input type="text" id="input1" value="<%=data.Qty_2018%>">
+            </div>
+            <div class="txt">
+                <b>Qty(2019) : </b>
+                <input type="text" id="input1" value="<%=data.Qty_2019%>">
+            </div>
+            <div class="txt">
+                <b>Hash : </b>
+                <input type="text" id="input1" value="<%=data.hash%>" disabled>
+            </div>
+            <div class="txt">
+                <b>PrevHash : </b>
+                <input type="text" id="input1" value="<%=data.prevHash%>" disabled>
+            </div>
 
 
 
-    <%});%>
-</ul>
+        </div>
+
+
+
+        <%});%>
+    </ul>
+</div>

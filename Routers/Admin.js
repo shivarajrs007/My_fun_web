@@ -81,7 +81,7 @@ router.get('/warehouse', (req, res) => {
     const blockchainDb = require('../model/blockSchema')
     let data = []
     async function War() {
-        const blocks = await blockchainDb.find({ Section: "warehouse" })
+        const blocks = await blockchainDb.find({ Section: "Warehouse" })
         const admin = await AdminDB.findOne()
         //console.log(admin.Name);
 

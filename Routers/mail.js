@@ -44,7 +44,7 @@ function mail() {
 
         auth: {
             user: 'shivarajrs007@gmail.com',
-            pass: 'Shivrs'
+            pass: ''
         }
     });
     let mailOptions = {

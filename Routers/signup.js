@@ -45,7 +45,7 @@ router.post('/register', (req, res) => {
         }
         if (match == true) {
             res.render('signup', {
-                psw: "Email already exists"
+                emails: "Email already exists"
             })
         }
 

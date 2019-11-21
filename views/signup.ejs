@@ -41,14 +41,18 @@
                             <input type="email" id="email" name='email' required>
                             <label for="email">Your Email</label>
                         </div>
-                        <center> <%= typeof emails != 'undefined' ? emails : '' %></center>
+                        <div class="red-text">
+                            <center> <%= typeof emails != 'undefined' ? emails : '' %></center>
+                        </div>
                         <div class="input-field">
                             <i class="material-icons prefix">lock</i>
                             <input type="password" id="pass1" name='pass1' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                 required>
                             <label for="pass1">Your Password</label>
-                            <center> <%= typeof psw != 'undefined' ? psw : '' %></center>
+                            <div class="red-text">
+                                <center> <%= typeof psw != 'undefined' ? psw : '' %></center>
+                            </div>
                         </div>
                         <div class="input-field">
                             <i class="material-icons prefix">lock</i>
