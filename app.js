@@ -40,7 +40,7 @@ app.use('/product', require('./Routers/product'))
 app.use('/Admin', require('./Routers/Admin'))
 app.use('/dashboard', require('./Routers/dashboard'))
 app.use('/back', require('./Routers/back'))
-app.use('/Smart', require('./Routers/smart'))
+app.use('/Smart', require('./Routers/smartcontract'))
 
 
 

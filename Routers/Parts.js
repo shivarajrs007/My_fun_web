@@ -51,8 +51,10 @@ router.post('/part', (req, res) => {
                 partNumber: req.body.partnumber,
                 equipType: req.body.equpType,
                 scalablepart: req.body.Scale,
-                Qty_2018: req.body.Qty1,
-                Qty_2019: req.body.Qty2,
+                Available: 10,
+                Req: req.body.Qty1,
+                Assigned: 0,
+                Approval: "Panding...",
 
                 hash: cHash,
                 prevHash: prevhash,
@@ -93,8 +95,10 @@ router.post('/part', (req, res) => {
             partNumber: req.body.partnumber,
             equipType: req.body.equpType,
             scalablepart: req.body.Scale,
-            Qty_2018: req.body.Qty1,
-            Qty_2019: req.body.Qty2,
+            Available: 10,
+            Req: req.body.Qty1,
+            Assigned: 0,
+            Approval: "Panding...",
 
             hash: cHash,
             prevHash: prevhash,
@@ -103,7 +107,6 @@ router.post('/part', (req, res) => {
             Nonce: nonce,
             ID: idVal,
             Section: select,
-
 
         }
         console.log(inputs);

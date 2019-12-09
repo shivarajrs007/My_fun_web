@@ -6,8 +6,10 @@ const blockSchema = new mongoose.Schema({
     partNumber: String,
     equipType: String,
     scalablepart: String,
-    Qty_2018: Number,
-    Qty_2019: Number,
+    Req: Number,
+    Available: Number,
+    Assigned: Number,
+    Approval: String,
 
     hash: String,
     prevHash: String,

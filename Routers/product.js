@@ -4,7 +4,7 @@ var localStorage = require('localStorage')
 
 const Hash = require('../Hash/hash')
 const blockchainDb = require('../model/blockSchema')
-let database = [];
+// let database = [];
 
 
 

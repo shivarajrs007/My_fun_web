@@ -16,6 +16,11 @@
             margin-right: 30px
         }
 
+        .container2 {
+            margin-left: 80px;
+            margin-right: 80px
+        }
+
         .centerOne {
             margin-left: 25em;
             margin-top: 20em;
@@ -37,10 +42,6 @@
 
         }
 
-        .centerwel1 {
-            margin-top: 5em;
-            margin-left: 43em;
-        }
 
         .cardwel {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -53,6 +54,11 @@
 
         .cardwel:hover {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .centerwel {
+            margin-top: 5em;
+            margin-left: 45em;
         }
 
         .cardwel1 {
@@ -68,16 +74,19 @@
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         }
 
-        .centerwel {
+        .centerwel1 {
             margin-top: 5em;
-            margin-left: 40em;
+            margin-left: 45em;
         }
+
+
+
 
         .cardList {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: 0.3s;
             width: 20%;
-            height: 400px;
+            height: 450px;
 
             float: left;
             margin-left: 3em;
@@ -155,6 +164,42 @@
         .dis {
             margin-left: 8em;
         }
+
+        /* Table css */
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #673ab7;
+            color: white;
+        }
+
+        .modal {
+            width: 25% !important;
+            height: 25% !important;
+        }
+
+        /* table end */
     </style>
 </head>
 
@@ -175,6 +220,7 @@
             });
             $('.parallax').parallax();
             $('select').formSelect();
+            $('.modal').modal();
         });
     </script>
 
