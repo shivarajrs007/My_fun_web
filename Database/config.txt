@@ -1,0 +1,2 @@
+mongoexport --uri="mongodb://localhost:27017/blockchain"  --collection=blocks  --out=blocks.json
+mongoimport --uri="mongodb://localhost:27017/myDatabase"  --collection=blocks  --file=blocks.json
