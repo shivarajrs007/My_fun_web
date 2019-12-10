@@ -38,7 +38,43 @@
         </div>
     </div>
 </div>
+<a class="waves-effect waves-light btn  deep-purple white-text modal-trigger" href="#modal"
+    style="float: right; margin-right:90px"><b>+ Assign</b> </a>
+<!-- Modal Trigger -->
 
+
+<!-- Modal Structure -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <form action="" method='post'>
+
+            <div class="txtS">
+                <b>Block : </b>
+                <input type="text" id="input2" name="block" required>
+            </div><br>
+            <div class="txtS">
+                <b>Assign Qty : </b>
+                <input type="number" id="input2" name="assign" required>
+            </div>
+
+
+
+
+    </div>
+
+    <div class="modal-footer">
+        <a href="/Smart/smart" class="modal-close waves-effect waves-green ">
+            <div class="input-field center">
+                <button class="btn indigo darken-4">Submit</button>
+            </div>
+        </a>
+    </div>
+
+    </form>
+
+</div>
+
+</div>
 <div style="margin-top: 5em;">
     <div class="container2">
         <table id="customers">
@@ -52,43 +88,14 @@
                 <th>Available Qty</th>
                 <th>Requested Qty</th>
                 <th>Assigned Qty</th>
-                <th></th>
+
                 <th>Status</th>
 
             </tr>
             <% data.forEach((data)=>{%>
-            <!-- Modal Trigger -->
 
-
-            <!-- Modal Structure -->
-            <div id="<%=data.ID%>" class="modal">
-                <div class="modal-content">
-                    <form action="" method='post'>
-                        <div class="input-field">
-                            <div class="txtS">
-                                <b>Block : </b>
-                                <input type="text" id="input2" value="<%=data.index%>" name="block" readonly>
-                            </div><br>
-
-
-
-
-                        </div>
-                        <input type="number" id="pass" name="assign" required>
-                        <div class="modal-footer">
-                            <a href="/Smart/smart" class="modal-close waves-effect waves-green">
-                                <div class="input-field center">
-                                    <button class="btn indigo darken-4">Submit</button>
-                                </div>
-                            </a>
-                        </div>
-
-                    </form>
-
-                </div>
-
-            </div>
             <tr>
+
                 <td> <%=data.ID%></td>
                 <td><%=data.Section%></td>
                 <td><%=data.index%></td>
@@ -98,9 +105,7 @@
                 <td><%=data.Available%></td>
                 <td><%=data.Req%></td>
                 <td><%=data.Assigned%></td>
-                <td><a class="waves-effect waves-light btn  deep-purple white-text modal-trigger"
-                        href="#<%=data.ID%>">Assign</a>
-                </td>
+
                 <td><%=data.Approval%></td>
 
             </tr>

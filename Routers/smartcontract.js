@@ -40,24 +40,31 @@ router.post("/smart", (req, res) => {
         indx = req.body.block
         val = req.body.assign
         val = parseInt(val)
-        result = 10 - val
+
+        const block = await blockchainDb.find({ index: indx })
+        // console.log(block);
+
+        // console.log(block[0].Req);
+        Ava = block[0].Available - val
+        Reqs = block[0].Req - val
 
 
         const blocks = await blockchainDb.findOneAndUpdate({ index: indx }, {
             $set: {
                 Assigned: req.body.assign,
                 Approval: 'Approved',
-                Available: result,
+                Available: Ava,
+                Req: Reqs,
             }
         }, { new: true })
         //console.log(blocks);
         //database.push(blocks)
         //console.log(database);
-        const block = await blockchainDb.find()
+        const blockss = await blockchainDb.find()
         //console.log(admin.Name);
 
         //console.log(blocks);
-        data.push(...block)
+        data.push(...blockss)
         //console.log(data);
         res.render('smartcontract', {
             data: data,
