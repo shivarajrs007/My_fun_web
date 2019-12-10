@@ -49,6 +49,7 @@
                 <th>Part number</th>
                 <th>Equip Type</th>
                 <th>Saleable Part</th>
+                <th>Available Qty</th>
                 <th>Requested Qty</th>
                 <th>Assigned Qty</th>
                 <th></th>
@@ -64,9 +65,9 @@
                 <div class="modal-content">
                     <form action="" method='post'>
                         <div class="input-field">
-                            <div class="txt">
+                            <div class="txtS">
                                 <b>Block : </b>
-                                <input type="text" id="input1" value="<%=data.index%>" name="block">
+                                <input type="text" id="input2" value="<%=data.index%>" name="block" readonly>
                             </div><br>
 
 
@@ -94,6 +95,7 @@
                 <td><%=data.partNumber%></td>
                 <td><%=data.equipType%></td>
                 <td><%=data.scalablepart%></td>
+                <td><%=data.Available%></td>
                 <td><%=data.Req%></td>
                 <td><%=data.Assigned%></td>
                 <td><a class="waves-effect waves-light btn  deep-purple white-text modal-trigger"

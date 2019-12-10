@@ -22,9 +22,9 @@ router.post('/signin', (req, res) => {
         async function Admins() {
             const admin = await AdminDB.findOne()
             const blocks = await blockchainDb.find()
-            console.log(admin.Name);
+            // console.log(admin.Name);
 
-            console.log(blocks);
+            // console.log(blocks);
             data.push(...blocks)
             //console.log(data);
             if (blocks.length === 0) {

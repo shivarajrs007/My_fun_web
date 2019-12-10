@@ -38,10 +38,16 @@ router.post("/smart", (req, res) => {
     let data = []
     async function Assign() {
         indx = req.body.block
+        val = req.body.assign
+        val = parseInt(val)
+        result = 10 - val
+
+
         const blocks = await blockchainDb.findOneAndUpdate({ index: indx }, {
             $set: {
                 Assigned: req.body.assign,
                 Approval: 'Approved',
+                Available: result,
             }
         }, { new: true })
         //console.log(blocks);
